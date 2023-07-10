@@ -99,6 +99,10 @@ class PersonCl {
     calcAge(){
         console.log(2037 - this.birthYear);
     };
+
+    greet(){
+        console.log(`hety ${this.firstName}`);
+    }
 };
 
 const jessica = new PersonCl('Jessica', 1996);
@@ -106,3 +110,12 @@ console.log(jessica);
 jessica.calcAge();
 
 console.log(jessica.__proto__ === PersonCl.prototype);
+
+// PersonCl.prototype.greet = function(){
+    // console.log(`hey ${this.firstName}`);
+// };
+jessica.greet();
+
+// 1. Classes are not hoisted
+// 2. Classes are first-class citizens 
+// 3. Classes are executed in strict mode
